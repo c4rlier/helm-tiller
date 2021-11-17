@@ -55,7 +55,7 @@ fi
 # Install to bin
 if [[ ${COMPARE_VERSION} -ge 0 ]]; then
   # Helm v2.11 and versions above
-  rm -rf bin && mkdir bin && tar xvf "$FILENAME" -C bin --strip=1 "${os}"-amd64/tiller > /dev/null && rm -f "$FILENAME"
+  rm -rf bin && mkdir bin && tar xzvf "$FILENAME" -C bin --strip=1 "${os}"-amd64/tiller > /dev/null && rm -f "$FILENAME"
 else
   # Helm v2.10 and versions below
   rm -rf bin && mkdir bin && tar xzvf "$FILENAME" -C bin > /dev/null && rm -f "$FILENAME"
